@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <!-- Toolbar personalizada -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarPostulados"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/white"
+        android:elevation="4dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+
+            <!-- Título -->
+            <TextView
+                android:id="@+id/toolbarTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Postulados"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/green"
+                android:textSize="25sp"
+                android:fontFamily="@font/codec_pro_bold"
+                android:textStyle="bold" />
+
+            <!-- Botón de filtros -->
+            <ImageButton
+                android:id="@+id/btnToggleFiltros"
+                android:layout_width="36dp"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="18dp"
+                android:layout_marginTop="21dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="fitCenter"
+                android:src="@drawable/baseline_filter_alt_24"
+                android:scaleX="-1"
+                app:tint="@color/green" />
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Botón especial para filtrar por puesto -->
+    <Spinner
+        android:id="@+id/spinnerPuesto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:backgroundTint="@android:color/white"
+        android:padding="10dp" />
+
+    <!-- Filtros convencionales ocultos -->
+    <LinearLayout
+        android:id="@+id/layoutFiltros"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/btnFiltroCarrera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Seleccionar carrera(s)"
+            android:backgroundTint="@android:color/white"
+            android:textColor="@android:color/darker_gray"
+            android:drawableEnd="@android:drawable/arrow_down_float"
+            android:gravity="start|center_vertical"
+            android:padding="12dp" />
+
+        <Button
+            android:id="@+id/btnFiltroEducacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Seleccionar nivel(es)"
+            android:backgroundTint="@android:color/white"
+            android:textColor="@android:color/darker_gray"
+            android:drawableEnd="@android:drawable/arrow_down_float"
+            android:gravity="start|center_vertical"
+            android:padding="12dp"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/btnFiltroExperiencia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Seleccionar experiencia"
+            android:backgroundTint="@android:color/white"
+            android:textColor="@android:color/darker_gray"
+            android:drawableEnd="@android:drawable/arrow_down_float"
+            android:gravity="start|center_vertical"
+            android:padding="12dp"
+            android:layout_marginTop="16dp" />
+    </LinearLayout>
+
+    <!-- Lista de postulados -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewPostulados"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/white" />
+</LinearLayout>

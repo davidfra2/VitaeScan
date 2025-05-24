@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <!-- Barra personalizada con botones -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/white"
+        android:elevation="4dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+
+            <!-- Título -->
+            <TextView
+                android:id="@+id/toolbarTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hojas de vida"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/green"
+                android:textSize="25sp"
+                android:fontFamily="@font/codec_pro_bold"
+                android:textStyle="bold" />
+
+            <!-- Botón de búsqueda -->
+            <ImageButton
+                android:id="@+id/btnSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="43dp"
+                android:layout_marginTop="21dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Buscar"
+                android:src="@android:drawable/ic_menu_search"
+                app:tint="@color/green" />
+
+            <!-- Botón de filtros -->
+            <ImageButton
+                android:id="@+id/btnIrPostulados"
+                android:contentDescription="Ir a Postulados"
+                android:layout_width="36dp"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="88dp"
+                android:layout_marginTop="21dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="fitCenter"
+                android:src="@drawable/baseline_arrow_back_24"
+                android:scaleX="-1"
+                app:tint="@color/green" />
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Barra de búsqueda -->
+    <EditText
+        android:id="@+id/etSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/green"
+        android:drawableStart="@android:drawable/ic_menu_search"
+        android:drawablePadding="8dp"
+        android:hint="Buscar archivo..."
+        android:padding="12dp"
+        android:visibility="gone" />
+
+    <!-- Panel de filtros con selección múltiple -->
+    <LinearLayout
+        android:id="@+id/layoutFiltros"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+
+        <!-- Carrera -->
+        <Button
+            android:id="@+id/btnFiltroCarrera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#33FF0000"
+            android:text="Seleccionar carrera(s)"
+            android:backgroundTint="@android:color/white"
+            android:textColor="@android:color/darker_gray"
+            android:drawableEnd="@android:drawable/arrow_down_float"
+            android:gravity="start|center_vertical"
+            android:padding="12dp" />
+
+        <!-- Repite lo mismo para educación y experiencia -->
+        <Button
+            android:id="@+id/btnFiltroEducacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Seleccionar nivel(es)"
+            android:backgroundTint="@android:color/white"
+            android:textColor="@android:color/darker_gray"
+            android:drawableEnd="@android:drawable/arrow_down_float"
+            android:gravity="start|center_vertical"
+            android:padding="12dp"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/btnFiltroExperiencia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Seleccionar experiencia"
+            android:backgroundTint="@android:color/white"
+            android:textColor="@android:color/darker_gray"
+            android:drawableEnd="@android:drawable/arrow_down_float"
+            android:gravity="start|center_vertical"
+            android:padding="12dp"
+            android:layout_marginTop="16dp" />
+
+    </LinearLayout>
+
+    <!-- Lista de hojas de vida -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="8dp"
+        android:background="@color/white" />
+</LinearLayout>

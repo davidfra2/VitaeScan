@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/primer_inicio3"
+    android:gravity="center">
+
+    <Button
+        android:id="@+id/btn_empezar"
+        android:layout_width="340dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/green"
+        android:fontFamily="@font/poppins_regular"
+        android:elevation="4dp"
+        android:text="Empezar"
+        android:paddingTop="10dp"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:cornerRadius="40px" />
+
+</LinearLayout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "735703863556",
+    "project_id": "vitaescan",
+    "storage_bucket": "vitaescan.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:735703863556:android:624fb4fd68b3998b18c051",
+        "android_client_info": {
+          "package_name": "com.example.vitaescan"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsP8qAtFPjc_FVMl51148QghW3tN1VQLA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

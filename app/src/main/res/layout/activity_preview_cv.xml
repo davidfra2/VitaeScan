@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <!-- 📸 Imagen de perfil -->
+        <ImageView
+            android:id="@+id/image_preview"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_marginBottom="12dp"
+            android:src="@drawable/ic_launcher_foreground"
+            android:scaleType="centerCrop"
+            android:background="@android:color/darker_gray"
+            android:contentDescription="Foto de perfil" />
+
+        <!-- 🔘 Botón para seleccionar imagen -->
+        <Button
+            android:id="@+id/btn_select_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seleccionar Foto"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/green"
+            android:fontFamily="@font/poppins_regular"
+            android:elevation="4dp"
+            android:paddingTop="10dp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:cornerRadius="40px"/>
+
+        <!-- 📋 Nombre -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <EditText
+                android:id="@+id/edit_nombre"
+                android:fontFamily="@font/poppins_regular"
+
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="Nombre completo" />
+
+            <ImageView
+                android:src="@android:drawable/ic_menu_edit"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:padding="4dp" />
+        </LinearLayout>
+
+        <!-- 🎓 Carrera -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <EditText
+                android:id="@+id/edit_carrera"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="Carrera" />
+
+            <ImageView
+                android:src="@android:drawable/ic_menu_edit"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:padding="4dp" />
+        </LinearLayout>
+
+        <!-- 📘 Estudios -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <EditText
+                android:id="@+id/edit_estudios"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="Estudios" />
+
+            <ImageView
+                android:src="@android:drawable/ic_menu_edit"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:padding="4dp" />
+        </LinearLayout>
+
+        <!-- 🧰 Experiencia -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+
+            <EditText
+                android:id="@+id/edit_experiencia"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_height="wrap_content"
+                android:hint="Experiencia" />
+
+            <ImageView
+                android:src="@android:drawable/ic_menu_edit"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:padding="4dp" />
+        </LinearLayout>
+
+        <!-- 💾 Botón Guardar -->
+        <Button
+            android:id="@+id/btn_guardar"
+            android:text="Guardar Hoja de Vida"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/green"
+            android:fontFamily="@font/poppins_regular"
+            android:elevation="4dp"
+            android:paddingTop="10dp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:cornerRadius="40px"/>
+    </LinearLayout>
+</ScrollView>
